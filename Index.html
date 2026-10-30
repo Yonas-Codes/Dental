@@ -1,0 +1,1832 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#087c91">
+<title>Africa Dental Clinic | Premium Dental Care</title>
+<meta name="description" content="Africa Dental Clinic offers professional dental care, teeth whitening, orthodontics, implants and more in Addis Ababa and Adama.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ==============================
+   1. GLOBAL VARIABLES & THEMES
+================================= */
+:root {
+  --primary: #087c91;
+  --primary-dark: #056477;
+  --accent: #16b89a;
+  --bg: #f6fafb;
+  --surface: #ffffff;
+  --surface2: #edf5f6;
+  --text: #17323c;
+  --muted: #71858c;
+  --border: #e2ecee;
+  --shadow: 0 12px 35px rgba(18,65,78,.08);
+  --radius: 20px;
+}
+
+body.dark {
+  --bg: #0b1820;
+  --surface: #122630;
+  --surface2: #1a3440;
+  --text: #e9f4f5;
+  --muted: #a2b7bd;
+  --border: #29414a;
+  --shadow: 0 12px 35px rgba(0,0,0,.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'DM Sans','Noto Sans Ethiopic',sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background .3s,color .3s;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+button,input,textarea,select { font: inherit; }
+button { cursor: pointer; }
+img { max-width: 100%; display: block; }
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 48px;
+}
+
+.eyebrow {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  font-family: Manrope,sans-serif;
+  font-size: clamp(28px,4vw,42px);
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: .25s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 7px 20px rgba(8,124,145,.2);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.icon {
+  width: 23px;
+  height: 23px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* ==============================
+   2. NAVIGATION
+================================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  transition: .3s;
+}
+
+.navbar {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.brand img {
+  width: 53px;
+  height: 53px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.brand-name {
+  font-family: Manrope,sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.brand-name span {
+  display: block;
+  font-size: 10px;
+  color: var(--primary);
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  transition: .2s;
+}
+
+.nav-links a:hover { color: var(--primary); }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control {
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text);
+  border-radius: 9px;
+  padding: 9px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.theme-btn {
+  width: 39px;
+  height: 39px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  background: var(--surface2);
+  display: grid;
+  place-items: center;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--text);
+}
+
+/* ==============================
+   3. HERO
+================================= */
+.hero {
+  min-height: 630px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg,rgba(5,34,46,.91) 0%,rgba(5,49,62,.75) 48%,rgba(5,49,62,.25) 100%),
+    url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=2000&q=85') center/cover;
+  color: white;
+}
+
+.hero-content {
+  max-width: 680px;
+  padding: 100px 0;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50px;
+  font-size: 12px;
+  margin-bottom: 27px;
+}
+
+.hero-tag span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #42dfba;
+}
+
+.hero h1 {
+  font-family: Manrope,sans-serif;
+  font-size: clamp(39px,6vw,66px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 22px;
+}
+
+.hero h1 em {
+  color: #49d6bd;
+  font-style: normal;
+}
+
+.hero p {
+  color: #d5e8ed;
+  font-size: 16px;
+  max-width: 540px;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.hero .btn-primary { background: #16ad9a; }
+.hero .btn-primary:hover { background: #0d947f; }
+.hero .btn-outline {
+  border-color: rgba(255,255,255,.6);
+  color: white;
+}
+.hero .btn-outline:hover {
+  background: white;
+  color: #087c91;
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 7px;
+  background: linear-gradient(90deg,#087c91,#16b89a,#50d9c0);
+}
+
+/* ==============================
+   4. TRUST STRIP
+================================= */
+.trust-strip {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 25px 0;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.trust-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.trust-item .icon { color: var(--primary); }
+
+/* ==============================
+   5. ABOUT
+================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+}
+
+.about-badge {
+  position: absolute;
+  right: -20px;
+  bottom: 25px;
+  background: var(--primary);
+  color: white;
+  padding: 20px 24px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  font-weight: 700;
+}
+
+.about-badge strong {
+  display: block;
+  font-size: 24px;
+}
+
+.about-content .eyebrow { text-align: left; }
+
+.about-content h2 {
+  font-family: Manrope,sans-serif;
+  font-size: clamp(28px,4vw,40px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 25px 0 30px;
+}
+
+.feature {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.feature .icon { color: var(--accent); }
+
+/* ==============================
+   6. SERVICES
+================================= */
+.services-section { background: var(--surface2); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 30px;
+  border-radius: var(--radius);
+  transition: .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary);
+}
+
+.service-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  color: var(--primary);
+  background: var(--surface2);
+  border-radius: 15px;
+  margin-bottom: 23px;
+}
+
+.service-card h3 {
+  font-family: Manrope,sans-serif;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* ==============================
+   7. CALL TO ACTION
+================================= */
+.cta {
+  background: linear-gradient(110deg,#07677c,#087c91 60%,#16a995);
+  color: white;
+  border-radius: 25px;
+  padding: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cta h2 {
+  font-family: Manrope,sans-serif;
+  font-size: clamp(25px,4vw,35px);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  color: #d4f0f0;
+  font-size: 14px;
+}
+
+.cta .btn {
+  background: white;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+/* ==============================
+   8. LOCATIONS
+================================= */
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+}
+
+.location-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: .3s;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.location-top {
+  background: linear-gradient(120deg,#087c91,#0b9a9b);
+  color: white;
+  padding: 27px;
+}
+
+.location-top .icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 13px;
+}
+
+.location-top h3 {
+  font-family: Manrope,sans-serif;
+  font-size: 23px;
+}
+
+.location-body { padding: 27px; }
+
+.location-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 17px;
+}
+
+.location-info .icon { color: var(--primary); }
+
+.phone-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.phone-links a {
+  padding: 10px 14px;
+  background: var(--surface2);
+  color: var(--primary);
+  font-weight: 800;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.phone-links a:hover { background: var(--primary); color: white; }
+
+/* ==============================
+   9. TELEGRAM CONTACT FORM
+================================= */
+.contact-section { background: var(--surface2); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info {
+  padding: 25px 0;
+}
+
+.contact-info h2 {
+  font-family: Manrope,sans-serif;
+  font-size: 35px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.contact-info > p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.contact-detail .service-icon {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.contact-detail strong { display: block; font-size: 14px; }
+.contact-detail small { color: var(--muted); font-size: 12px; }
+
+.contact-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 35px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+  font-family: Manrope,sans-serif;
+  font-size: 23px;
+  margin-bottom: 6px;
+}
+
+.form-subtitle {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.form-group { margin-bottom: 18px; }
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  padding: 14px 15px;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(8,124,145,.1);
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form .btn { width: 100%; }
+
+.form-note {
+  color: var(--muted);
+  text-align: center;
+  font-size: 11px;
+  margin-top: 15px;
+}
+
+/* ==============================
+   10. FOOTER
+================================= */
+footer {
+  background: #102c37;
+  color: white;
+  padding: 65px 0 22px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 45px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.footer-brand img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.footer-brand strong { font-size: 17px; }
+.footer-about { color: #a9c0c6; font-size: 13px; max-width: 330px; }
+
+.footer-col h4 {
+  font-family: Manrope,sans-serif;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.footer-col a {
+  display: block;
+  color: #a9c0c6;
+  font-size: 13px;
+  margin-bottom: 12px;
+  transition: .2s;
+}
+
+.footer-col a:hover { color: #4dd8be; }
+
+.footer-bottom {
+  padding-top: 22px;
+  border-top: 1px solid #2c4650;
+  text-align: center;
+  color: #92aeb5;
+  font-size: 12px;
+}
+
+.footer-bottom span { color: #4dd8be; }
+
+/* ==============================
+   11. WHATSAPP / PHONE FLOATING CTA
+================================= */
+.floating-call {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 900;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #16b89a;
+  color: white;
+  box-shadow: 0 7px 25px rgba(0,0,0,.2);
+  transition: .25s;
+}
+
+.floating-call:hover { transform: scale(1.1); }
+
+/* ==============================
+   12. ANIMATIONS & RESPONSIVENESS
+================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .7s,transform .7s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(max-width:950px) {
+  .nav-links { gap: 15px; }
+  .nav-links a { font-size: 12px; }
+  .nav-actions .btn { display: none; }
+  .about-grid { gap: 35px; }
+}
+
+@media(max-width:760px) {
+  .section { padding: 75px 0; }
+
+  .navbar { height: 72px; }
+  .brand img { width: 45px; height: 45px; }
+  .brand-name { font-size: 14px; }
+
+  .menu-btn {
+    display: grid;
+    place-items: center;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 5% 20px;
+  }
+
+  .nav-links.active { display: flex; }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+    font-size: 14px;
+  }
+
+  .nav-actions { margin-left: auto; }
+
+  .hero { min-height: 580px; }
+  .hero-content { padding: 75px 0; }
+  .hero h1 { letter-spacing: -1px; }
+
+  .trust-grid { grid-template-columns: 1fr; gap: 17px; }
+  .trust-item { justify-content: flex-start; }
+
+  .about-grid,
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .about-image img { height: 350px; }
+  .about-badge { right: 10px; }
+
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .locations-grid { grid-template-columns: 1fr; }
+
+  .cta {
+    padding: 35px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .footer-grid > div:first-child { grid-column: 1/-1; }
+}
+
+@media(max-width:480px) {
+  .container { width: 91%; }
+  .hero { min-height: 550px; }
+  .hero h1 { font-size: 39px; }
+  .hero p { font-size: 14px; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; }
+
+  .services-grid { grid-template-columns: 1fr; }
+  .feature-list { grid-template-columns: 1fr; }
+
+  .service-card { padding: 25px; }
+  .contact-form { padding: 23px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid > div:first-child { grid-column: auto; }
+  .contact-info h2 { font-size: 29px; }
+}
+
+/* Accessibility: respect reduced motion preferences */
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ==============================
+     NAVIGATION
+================================= -->
+<header>
+  <div class="container navbar">
+
+    <a href="#home" class="brand">
+      <img src="https://i.postimg.cc/0N930j8s/Screenshot-20261030-192901-Tik-Tok.jpg" alt="Africa Dental Clinic logo">
+      <div class="brand-name">
+        Africa Dental Clinic
+        <span>YOUR SMILE MATTERS</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" data-i18n="navHome">Home</a></li>
+      <li><a href="#about" data-i18n="navAbout">About Us</a></li>
+      <li><a href="#services" data-i18n="navServices">Services</a></li>
+      <li><a href="#locations" data-i18n="navLocations">Branches</a></li>
+      <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <select class="control" id="languageSelect" aria-label="Select language">
+        <option value="en">EN</option>
+        <option value="am">አማ</option>
+        <option value="om">OR</option>
+      </select>
+
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon" id="themeIcon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>
+        </svg>
+      </button>
+
+      <a href="#contact" class="btn btn-primary" data-i18n="navBook">Book Now</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ==============================
+     HERO
+================================= -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content reveal">
+
+      <div class="hero-tag">
+        <span></span>
+        <span data-i18n="heroTag">Professional Dental Care</span>
+      </div>
+
+      <h1 data-i18n="heroTitle">
+        A Healthier Smile.<br>
+        A <em>Brighter</em> Future.
+      </h1>
+
+      <p data-i18n="heroDesc">
+        Discover exceptional dental care with modern technology,
+        experienced professionals, and a patient-first approach.
+        Your smile deserves the best.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">
+          <svg class="icon" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="17" rx="2"/>
+            <path d="M16 2v4M8 2v4M3 10h18"/>
+          </svg>
+          <span data-i18n="heroBook">Book Appointment</span>
+        </a>
+
+        <a href="#locations" class="btn btn-outline">
+          <span data-i18n="heroContact">Find Our Clinic</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom"></div>
+</section>
+
+<!-- ==============================
+     TRUST STRIP
+================================= -->
+<section class="trust-strip">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+        <path d="m9 12 2 2 4-4"/>
+      </svg>
+      <span data-i18n="trust1">Patient-First Care</span>
+    </div>
+
+    <div class="trust-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 8v4l3 2"/>
+        <circle cx="12" cy="12" r="10"/>
+      </svg>
+      <span data-i18n="trust2">Modern Dental Technology</span>
+    </div>
+
+    <div class="trust-item">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/>
+      </svg>
+      <span data-i18n="trust3">Professional Dental Services</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     ABOUT US
+================================= -->
+<section class="section" id="about">
+  <div class="container about-grid">
+
+    <div class="about-image reveal">
+      <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1000&q=85" alt="Modern dental clinic and dental care">
+      <div class="about-badge">
+        <strong>2</strong>
+        <span data-i18n="aboutBadge">Convenient Locations</span>
+      </div>
+    </div>
+
+    <div class="about-content reveal">
+      <div class="eyebrow" data-i18n="aboutEyebrow">ABOUT OUR CLINIC</div>
+
+      <h2 data-i18n="aboutTitle">
+        Creating Healthy Smiles, One Patient at a Time.
+      </h2>
+
+      <p data-i18n="aboutP1">
+        At Africa Dental Clinic, we believe everyone deserves a
+        healthy, confident smile. We are committed to delivering
+        quality dental care in a welcoming and comfortable environment.
+      </p>
+
+      <p data-i18n="aboutP2">
+        Our approach combines modern dental technology,
+        professional expertise, and personalized attention
+        to help every patient receive the care they need.
+      </p>
+
+      <div class="feature-list">
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>
+          <span data-i18n="feature1">Patient-centered approach</span>
+        </div>
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>
+          <span data-i18n="feature2">Modern equipment</span>
+        </div>
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>
+          <span data-i18n="feature3">Professional specialists</span>
+        </div>
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>
+          <span data-i18n="feature4">Comfortable environment</span>
+        </div>
+      </div>
+
+      <a href="#services" class="btn btn-primary" data-i18n="aboutButton">Explore Our Services</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==============================
+     SERVICES
+================================= -->
+<section class="section services-section" id="services">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow" data-i18n="serviceEyebrow">WHAT WE OFFER</div>
+      <h2 data-i18n="serviceTitle">Comprehensive Dental Services</h2>
+      <p data-i18n="serviceDesc">
+        From routine checkups to advanced dental treatments,
+        we're here to help you maintain your best smile.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card reveal">
+        <div class="service-icon">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 3c-5 0-8 3-8 8 0 5 3 10 5 10 2 0 1-6 3-6s1 6 3 6c2 0 5-5 5-10 0-5-3-8-8-8z"/>
+          </svg>
+        </div>
+        <h3 data-i18n="s1Title">General Checkups</h3>
+        <p data-i18n="s1Desc">Regular dental examinations and preventive care to keep your teeth and gums healthy.</p>
+        <a href="#contact" class="service-link"><span data-i18n="learnMore">Learn More</span> →</a>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/>
+          </svg>
+        </div>
+        <h3 data-i18n="s2Title">Teeth Whitening</h3>
+        <p data-i18n="s2Desc">Professional whitening treatments designed to brighten your smile.</p>
+        <a href="#contact" class="service-link"><span data-i18n="learnMore">Learn More</span> →</a>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M4 5h16M4 12h16M4 19h16M8 3v4m8-4v4M8 10v4m8-4v4M8 17v4m8-4v4"/>
+          </svg>
+        </div>
+        <h3 data-i18n="s3Title">Orthodontics</h3>
+        <p data-i18n="s3Desc">Dental alignment solutions to improve the function and appearance of your smile.</p>
+        <a href="#contact" class="service-link"><span data-i18n="learnMore">Learn More</span> →</a>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2v20M7 7h10M7 12h10M7 17h10"/>
+            <path d="M5 4h14v16H5z"/>
+          </svg>
+        </div>
+        <h3 data-i18n="s4Title">Dental Implants</h3>
+        <p data-i18n="s4Desc">Advanced tooth replacement options to help restore your smile.</p>
+        <a href="#contact" class="service-link"><span data-i18n="learnMore">Learn More</span> →</a>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 3c-5 0-8 3-8 8 0 5 3 10 5 10 2 0 1-6 3-6s1 6 3 6c2 0 5-5 5-10 0-5-3-8-8-8z"/>
+            <path d="M12 8v5"/>
+          </svg>
+        </div>
+        <h3 data-i18n="s5Title">Root Canal Treatment</h3>
+        <p data-i18n="s5Desc">Specialized treatment to address infection and help preserve natural teeth.</p>
+        <a href="#contact" class="service-link"><span data-i18n="learnMore">Learn More</span> →</a>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <h3 data-i18n="s6Title">Preventive Dental Care</h3>
+        <p data-i18n="s6Desc">Cleaning, oral hygiene guidance, and preventive treatments for long-term dental health.</p>
+        <a href="#contact" class="service-link"><span data-i18n="learnMore">Learn More</span> →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     APPOINTMENT CTA
+================================= -->
+<section class="section">
+  <div class="container">
+    <div class="cta reveal">
+      <div>
+        <h2 data-i18n="ctaTitle">Your Smile Deserves Expert Care.</h2>
+        <p data-i18n="ctaDesc">Take the first step towards healthier teeth. Get in touch with our team today.</p>
+      </div>
+      <a href="#contact" class="btn">
+        <span data-i18n="ctaButton">Get an Appointment</span> →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     BRANCHES
+================================= -->
+<section class="section" id="locations">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow" data-i18n="locationEyebrow">FIND US</div>
+      <h2 data-i18n="locationTitle">Visit Our Branches</h2>
+      <p data-i18n="locationDesc">Quality dental care, conveniently located in two cities.</p>
+    </div>
+
+    <div class="locations-grid">
+
+      <article class="location-card reveal">
+        <div class="location-top">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+          <h3>Addis Ababa</h3>
+          <span data-i18n="addisLabel">Addis Ababa Branch</span>
+        </div>
+
+        <div class="location-body">
+          <div class="location-info">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            <span>Megenagna City Mall, 3rd Floor</span>
+          </div>
+
+          <div class="location-info">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.8L8.1 11a16 16 0 0 0 5 5l1.7-1.9a2 2 0 0 1 1.8-.6l2.8.5a2 2 0 0 1 1.6 1.9z"/>
+            </svg>
+            <span data-i18n="callBranch">Call our branch</span>
+          </div>
+
+          <div class="phone-links">
+            <a href="tel:+251932225095">0932225095</a>
+            <a href="tel:+251913100623">0913100623</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="location-card reveal">
+        <div class="location-top">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+          <h3>Adama</h3>
+          <span data-i18n="adamaLabel">Adama Branch</span>
+        </div>
+
+        <div class="location-body">
+          <div class="location-info">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            <span>Next to Mebrat Hayl, 2nd Floor</span>
+          </div>
+
+          <div class="location-info">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.8L8.1 11a16 16 0 0 0 5 5l1.7-1.9a2 2 0 0 1 1.8-.6l2.8.5a2 2 0 0 1 1.6 1.9z"/>
+            </svg>
+            <span data-i18n="callBranch">Call our branch</span>
+          </div>
+
+          <div class="phone-links">
+            <a href="tel:+251932225095">0932225095</a>
+            <a href="tel:+251913100623">0913100623</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     CONTACT / TELEGRAM FORM
+================================= -->
+<section class="section contact-section" id="contact">
+  <div class="container contact-grid">
+
+    <div class="contact-info reveal">
+      <div class="eyebrow" data-i18n="contactEyebrow">GET IN TOUCH</div>
+      <h2 data-i18n="contactTitle">Let's Take Care of Your Smile.</h2>
+      <p data-i18n="contactDesc">
+        Have questions or want to schedule a dental visit?
+        Send us a message and our team will be happy to assist.
+      </p>
+
+      <div class="contact-detail">
+        <div class="service-icon">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.8L8.1 11a16 16 0 0 0 5 5l1.7-1.9a2 2 0 0 1 1.8-.6l2.8.5a2 2 0 0 1 1.6 1.9z"/>
+          </svg>
+        </div>
+        <div>
+          <strong data-i18n="contactPhone">Phone Numbers</strong>
+          <small>0932225095 / 0913100623</small>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="service-icon">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+        </div>
+        <div>
+          <strong data-i18n="contactBranches">Our Branches</strong>
+          <small>Addis Ababa & Adama, Ethiopia</small>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="service-icon">
+          <svg class="icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <div>
+          <strong data-i18n="contactAvailability">Appointments</strong>
+          <small data-i18n="contactAvailabilityDesc">Contact us to arrange your visit.</small>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="telegramForm">
+      <h3 data-i18n="formTitle">Send Us a Message</h3>
+      <p class="form-subtitle" data-i18n="formDesc">Fill in the details below to contact our team.</p>
+
+      <div class="form-group">
+        <label for="name" data-i18n="formName">Your Full Name</label>
+        <input type="text" id="name" required maxlength="80" placeholder="Enter your name">
+      </div>
+
+      <div class="form-group">
+        <label for="phone" data-i18n="formPhone">Phone Number</label>
+        <input type="tel" id="phone" required maxlength="20" placeholder="e.g. 09XXXXXXXX">
+      </div>
+
+      <div class="form-group">
+        <label for="message" data-i18n="formMessage">Your Message</label>
+        <textarea id="message" required maxlength="1500" placeholder="How can we help you?"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="m22 2-7 20-4-9-9-4z"/>
+          <path d="M22 2 11 13"/>
+        </svg>
+        <span data-i18n="formButton">Send via Telegram</span>
+      </button>
+
+      <p class="form-note" data-i18n="formNote">
+        Telegram will open with your message ready to share.
+      </p>
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ==============================
+     FOOTER
+================================= -->
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-brand">
+          <img src="https://i.postimg.cc/0N930j8s/Screenshot-20261030-192901-Tik-Tok.jpg" alt="Africa Dental Clinic">
+          <strong>Africa Dental Clinic</strong>
+        </div>
+        <p class="footer-about" data-i18n="footerDesc">
+          Dedicated to healthier smiles through professional dental
+          care, modern technology, and patient-centered service.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footerLinks">Quick Links</h4>
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#about" data-i18n="navAbout">About Us</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#locations" data-i18n="navLocations">Branches</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footerContact">Contact Us</h4>
+        <a href="tel:+251932225095">0932225095</a>
+        <a href="tel:+251913100623">0913100623</a>
+        <a href="#locations">Addis Ababa, Ethiopia</a>
+        <a href="#locations">Adama, Ethiopia</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Africa Dental Clinic.
+      <span data-i18n="footerRights">All rights reserved.</span>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Floating phone button -->
+<a href="tel:+251932225095" class="floating-call" aria-label="Call Africa Dental Clinic">
+  <svg class="icon" viewBox="0 0 24 24">
+    <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.8L8.1 11a16 16 0 0 0 5 5l1.7-1.9a2 2 0 0 1 1.8-.6l2.8.5a2 2 0 0 1 1.6 1.9z"/>
+  </svg>
+</a>
+
+<script>
+/* ==========================================
+   1. TRANSLATIONS
+========================================== */
+
+const translations = {
+
+en: {
+navHome:"Home",
+navAbout:"About Us",
+navServices:"Services",
+navLocations:"Branches",
+navContact:"Contact",
+navBook:"Book Now",
+
+heroTag:"Professional Dental Care",
+heroTitle:"A Healthier Smile.<br>A <em>Brighter</em> Future.",
+heroDesc:"Discover exceptional dental care with modern technology, experienced professionals, and a patient-first approach. Your smile deserves the best.",
+heroBook:"Book Appointment",
+heroContact:"Find Our Clinic",
+
+trust1:"Patient-First Care",
+trust2:"Modern Dental Technology",
+trust3:"Professional Dental Services",
+
+aboutEyebrow:"ABOUT OUR CLINIC",
+aboutTitle:"Creating Healthy Smiles, One Patient at a Time.",
+aboutP1:"At Africa Dental Clinic, we believe everyone deserves a healthy, confident smile. We are committed to delivering quality dental care in a welcoming and comfortable environment.",
+aboutP2:"Our approach combines modern dental technology, professional expertise, and personalized attention to help every patient receive the care they need.",
+aboutBadge:"Convenient Locations",
+feature1:"Patient-centered approach",
+feature2:"Modern equipment",
+feature3:"Professional specialists",
+feature4:"Comfortable environment",
+aboutButton:"Explore Our Services",
+
+serviceEyebrow:"WHAT WE OFFER",
+serviceTitle:"Comprehensive Dental Services",
+serviceDesc:"From routine checkups to advanced dental treatments, we're here to help you maintain your best smile.",
+
+s1Title:"General Checkups",
+s1Desc:"Regular dental examinations and preventive care to keep your teeth and gums healthy.",
+s2Title:"Teeth Whitening",
+s2Desc:"Professional whitening treatments designed to brighten your smile.",
+s3Title:"Orthodontics",
+s3Desc:"Dental alignment solutions to improve the function and appearance of your smile.",
+s4Title:"Dental Implants",
+s4Desc:"Advanced tooth replacement options to help restore your smile.",
+s5Title:"Root Canal Treatment",
+s5Desc:"Specialized treatment to address infection and help preserve natural teeth.",
+s6Title:"Preventive Dental Care",
+s6Desc:"Cleaning, oral hygiene guidance, and preventive treatments for long-term dental health.",
+learnMore:"Learn More",
+
+ctaTitle:"Your Smile Deserves Expert Care.",
+ctaDesc:"Take the first step towards healthier teeth. Get in touch with our team today.",
+ctaButton:"Get an Appointment",
+
+locationEyebrow:"FIND US",
+locationTitle:"Visit Our Branches",
+locationDesc:"Quality dental care, conveniently located in two cities.",
+addisLabel:"Addis Ababa Branch",
+adamaLabel:"Adama Branch",
+callBranch:"Call our branch",
+
+contactEyebrow:"GET IN TOUCH",
+contactTitle:"Let's Take Care of Your Smile.",
+contactDesc:"Have questions or want to schedule a dental visit? Send us a message and our team will be happy to assist.",
+contactPhone:"Phone Numbers",
+contactBranches:"Our Branches",
+contactAvailability:"Appointments",
+contactAvailabilityDesc:"Contact us to arrange your visit.",
+
+formTitle:"Send Us a Message",
+formDesc:"Fill in the details below to contact our team.",
+formName:"Your Full Name",
+formPhone:"Phone Number",
+formMessage:"Your Message",
+formButton:"Send via Telegram",
+formNote:"Telegram will open with your message ready to share.",
+
+footerDesc:"Dedicated to healthier smiles through professional dental care, modern technology, and patient-centered service.",
+footerLinks:"Quick Links",
+footerContact:"Contact Us",
+footerRights:"All rights reserved.",
+
+namePlaceholder:"Enter your name",
+phonePlaceholder:"e.g. 09XXXXXXXX",
+messagePlaceholder:"How can we help you?"
+},
+
+am: {
+navHome:"መነሻ",
+navAbout:"ስለ እኛ",
+navServices:"አገልግሎቶች",
+navLocations:"ቅርንጫፎች",
+navContact:"ያግኙን",
+navBook:"ቀጠሮ ይያዙ",
+
+heroTag:"ሙያዊ የጥርስ ሕክምና",
+heroTitle:"ጤናማ ፈገግታ።<br><em>የበለጠ ብሩህ</em> ወደፊት።",
+heroDesc:"በዘመናዊ ቴክኖሎጂ፣ በሙያተኛ ባለሙያዎች እና በታካሚ ተኮር አገልግሎት የጥርስ ሕክምና ያግኙ።",
+heroBook:"ቀጠሮ ይያዙ",
+heroContact:"ክሊኒካችንን ይጎብኙ",
+
+trust1:"ታካሚ ተኮር እንክብካቤ",
+trust2:"ዘመናዊ የጥርስ ቴክኖሎጂ",
+trust3:"ሙያዊ የጥርስ አገልግሎት",
+
+aboutEyebrow:"ስለ ክሊኒካችን",
+aboutTitle:"ለእያንዳንዱ ታካሚ ጤናማ ፈገግታ።",
+aboutP1:"በአፍሪካ የጥርስ ክሊኒክ ሁሉም ሰው ጤናማ እና በራስ መተማመን የተሞላ ፈገግታ ሊኖረው ይገባል ብለን እናምናለን።",
+aboutP2:"ዘመናዊ ቴክኖሎጂን፣ ሙያዊ እውቀትን እና ግላዊ ትኩረትን በማጣመር ጥራት ያለው አገልግሎት እናቀርባለን።",
+aboutBadge:"ምቹ ቦታዎች",
+feature1:"ታካሚ ተኮር አቀራረብ",
+feature2:"ዘመናዊ መሣሪያዎች",
+feature3:"ሙያተኛ ባለሙያዎች",
+feature4:"ምቹ አካባቢ",
+aboutButton:"አገልግሎቶቻችንን ይመልከቱ",
+
+serviceEyebrow:"የምንሰጣቸው አገልግሎቶች",
+serviceTitle:"ሁሉን አቀፍ የጥርስ አገልግሎቶች",
+serviceDesc:"ከመደበኛ ምርመራ እስከ የላቀ የጥርስ ሕክምና ድረስ እናገለግላለን።",
+
+s1Title:"አጠቃላይ ምርመራ",
+s1Desc:"ጥርስዎን እና ድድዎን ጤናማ ለማድረግ መደበኛ ምርመራ።",
+s2Title:"ጥርስ ማንጣት",
+s2Desc:"ፈገግታዎን የበለጠ ብሩህ ለማድረግ ሙያዊ ሕክምና።",
+s3Title:"የጥርስ ማስተካከያ",
+s3Desc:"የጥርስ አቀማመጥን ለማስተካከል የሚረዱ መፍትሄዎች።",
+s4Title:"የጥርስ ኢምፕላንት",
+s4Desc:"የጠፉ ጥርሶችን ለመተካት የላቁ የሕክምና አማራጮች።",
+s5Title:"የጥርስ ሥር ሕክምና",
+s5Desc:"ተፈጥሯዊ ጥርሶችን ለመጠበቅ የሚረዳ ልዩ ሕክምና።",
+s6Title:"መከላከያ የጥርስ እንክብካቤ",
+s6Desc:"የጥርስ ማጽዳት እና የአፍ ንጽህና መመሪያዎች።",
+learnMore:"ተጨማሪ ይወቁ",
+
+ctaTitle:"ፈገግታዎ ሙያዊ እንክብካቤ ይገባዋል።",
+ctaDesc:"ወደ ጤናማ ጥርሶች የመጀመሪያ እርምጃዎን ዛሬ ይውሰዱ።",
+ctaButton:"ቀጠሮ ይያዙ",
+
+locationEyebrow:"ያግኙን",
+locationTitle:"ቅርንጫፎቻችንን ይጎብኙ",
+locationDesc:"በሁለት ከተሞች የሚገኝ ጥራት ያለው የጥርስ ሕክምና።",
+addisLabel:"አዲስ አበባ ቅርንጫፍ",
+adamaLabel:"አዳማ ቅርንጫፍ",
+callBranch:"ቅርንጫፋችንን ይደውሉ",
+
+contactEyebrow:"ያግኙን",
+contactTitle:"ፈገግታዎን እንንከባከብ።",
+contactDesc:"ጥያቄ አለዎት? ወይም የሕክምና ቀጠሮ መያዝ ይፈልጋሉ? መልዕክት ይላኩልን።",
+contactPhone:"ስልክ ቁጥሮች",
+contactBranches:"ቅርንጫፎቻችን",
+contactAvailability:"ቀጠሮዎች",
+contactAvailabilityDesc:"ጉብኝትዎን ለማዘጋጀት ያግኙን።",
+
+formTitle:"መልዕክት ይላኩልን",
+formDesc:"ከቡድናችን ጋር ለመገናኘት የሚከተሉትን ይሙሉ።",
+formName:"ሙሉ ስም",
+formPhone:"ስልክ ቁጥር",
+formMessage:"መልዕክትዎ",
+formButton:"በቴሌግራም ይላኩ",
+formNote:"ቴሌግራም መልዕክትዎን ይዞ ይከፈታል።",
+
+footerDesc:"በሙያዊ የጥርስ ሕክምና እና በዘመናዊ ቴክኖሎጂ ጤናማ ፈገግታዎችን እንፈጥራለን።",
+footerLinks:"ፈጣን አገናኞች",
+footerContact:"ያግኙን",
+footerRights:"መብቱ በሕግ የተጠበቀ ነው።",
+
+namePlaceholder:"ስምዎን ያስገቡ",
+phonePlaceholder:"ለምሳሌ 09XXXXXXXX",
+messagePlaceholder:"እንዴት ልንረዳዎት እንችላለን?"
+},
+
+om: {
+navHome:"Mana",
+navAbout:"Waa'ee Keenya",
+navServices:"Tajaajiloota",
+navLocations:"Dameewwan",
+navContact:"Nu Qunnamaa",
+navBook:"Amma Beellama Qabadhaa",
+
+heroTag:"Tajaajila Ilkaan Ogummaa",
+heroTitle:"Seeqqoo Fayyaa.<br>Fuuldura <em>Ifaa</em>.",
+heroDesc:"Teeknooloojii ammayyaa, ogeessota muuxannoo qaban, fi tajaajila dhukkubsataa irratti xiyyeeffatu argadhaa. Seeqqoon keessan kunuunsa gaarii argachuu qaba.",
+heroBook:"Beellama Qabadhaa",
+heroContact:"Kiliinika Keenya Argadhaa",
+
+trust1:"Kunuunsa Dhukkubsataa",
+trust2:"Teeknooloojii Ilkaan Ammayyaa",
+trust3:"Tajaajila Ilkaan Ogummaa",
+
+aboutEyebrow:"WAA'EE KILIINIKA KEENYAA",
+aboutTitle:"Dhukkubsataa Tokkoon Tokkoon Seeqqoo Fayyaa Uumuu.",
+aboutP1:"Africa Dental Clinic keessatti namni hundi seeqqoo fayyaa fi ofitti amanamummaa qabu argachuu qaba jennee amanna. Kunuunsa ilkaan qulqullina qabu ni kennina.",
+aboutP2:"Teeknooloojii ammayyaa, beekumsa ogeessotaa fi xiyyeeffannoo dhuunfaa walitti fiduun dhukkubsattoota keenya ni tajaajilla.",
+aboutBadge:"Bakka Salphaa",
+feature1:"Dhukkubsataa irratti xiyyeeffachuu",
+feature2:"Meeshaalee ammayyaa",
+feature3:"Ogeessota muuxannoo qaban",
+feature4:"Naannoo mijataa",
+aboutButton:"Tajaajiloota Keenya Ilaalaa",
+
+serviceEyebrow:"WANTA KENNU",
+serviceTitle:"Tajaajiloota Ilkaan Guutuu",
+serviceDesc:"Qorannoo idilee irraa kaasee hanga yaala ilkaan sadarkaa olaanaatti isin tajaajilla.",
+
+s1Title:"Qorannoo Waliigalaa",
+s1Desc:"Qorannoo ilkaan idilee fi kunuunsa ittisaa fayyaa ilkaanii.",
+s2Title:"Addeessuu Ilkaanii",
+s2Desc:"Seeqqoo keessan ifa gochuuf yaala ogummaa.",
+s3Title:"Sirreeffama Ilkaanii",
+s3Desc:"Qindoomina ilkaan fooyyessuuf furmaatawwan yaalaa.",
+s4Title:"Implaantii Ilkaanii",
+s4Desc:"Ilkaan bade bakka buusuuf filannoowwan yaalaa ammayyaa.",
+s5Title:"Yaala Hidda Ilkaanii",
+s5Desc:"Infekshinii yaaluun ilkaan uumamaa eeguuf yaala addaa.",
+s6Title:"Kunuunsa Ittisaa Ilkaanii",
+s6Desc:"Qulqulleessuu fi qajeelfama qulqullina afaanii.",
+learnMore:"Dabalataan Baradhaa",
+
+ctaTitle:"Seeqqoon Keessan Kunuunsa Ogeessaa Mala.",
+ctaDesc:"Ilkaan fayyaa qabaachuuf tarkaanfii jalqabaa har'a fudhadhaa.",
+ctaButton:"Beellama Qabadhaa",
+
+locationEyebrow:"NU ARGADHAA",
+locationTitle:"Dameewwan Keenya Daawwadhaa",
+locationDesc:"Tajaajila ilkaan qulqullina qabu magaalota lama keessatti.",
+addisLabel:"Damee Finfinnee",
+adamaLabel:"Damee Adaamaa",
+callBranch:"Damee keenya bilbilaa",
+
+contactEyebrow:"NU QUNNAMAA",
+contactTitle:"Seeqqoo Keessan Kunuunsina.",
+contactDesc:"Gaaffii qabduu? Yookaan beellama yaalaa barbaadduu? Ergaa nuuf ergaa.",
+contactPhone:"Lakkoofsa Bilbilaa",
+contactBranches:"Dameewwan Keenya",
+contactAvailability:"Beellama",
+contactAvailabilityDesc:"Daawwannaa keessan qindeessuuf nu qunnamaa.",
+
+formTitle:"Ergaa Nuuf Ergaa",
+formDesc:"Garee keenya qunnamuuf odeeffannoo armaan gadii guutaa.",
+formName:"Maqaa Guutuu",
+formPhone:"Lakkoofsa Bilbilaa",
+formMessage:"Ergaa Keessan",
+formButton:"Telegramiin Ergaa",
+formNote:"Telegram ergaa keessan qopheessee bana.",
+
+footerDesc:"Tajaajila ilkaan ogummaa fi teeknooloojii ammayyaa fayyadamuun seeqqoo fayyaa uumna.",
+footerLinks:"Geessituuwwan",
+footerContact:"Nu Qunnamaa",
+footerRights:"Mirgi hundi seeraan eegama.",
+
+namePlaceholder:"Maqaa keessan galchaa",
+phonePlaceholder:"Fakkeenyaaf 09XXXXXXXX",
+messagePlaceholder:"Akkamitti isin gargaaruu dandeenya?"
+}
+
+};
+
+/* ==========================================
+   2. LANGUAGE SWITCHING
+========================================== */
+
+const languageSelect = document.getElementById("languageSelect");
+
+function changeLanguage(lang) {
+  const dictionary = translations[lang] || translations.en;
+
+  document.documentElement.lang = lang === "am" ? "am" : "en";
+
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    const key = element.dataset.i18n;
+
+    if (dictionary[key] !== undefined) {
+      element.innerHTML = dictionary[key];
+    }
+  });
+
+  const placeholders = {
+    name: dictionary.namePlaceholder,
+    phone: dictionary.phonePlaceholder,
+    message: dictionary.messagePlaceholder
+  };
+
+  document.getElementById("name").placeholder = placeholders.name;
+  document.getElementById("phone").placeholder = placeholders.phone;
+  document.getElementById("message").placeholder = placeholders.message;
+
+  languageSelect.value = lang;
+  localStorage.setItem("adc-language", lang);
+}
+
+languageSelect.addEventListener("change", event => {
+  changeLanguage(event.target.value);
+});
+
+changeLanguage(localStorage.getItem("adc-language") || "en");
+
+/* ==========================================
+   3. DARK / LIGHT MODE
+========================================== */
+
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+function updateTheme(isDark) {
+  document.body.classList.toggle("dark", isDark);
+
+  themeIcon.innerHTML = isDark
+    ? '<path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13z"/>'
+    : '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>';
+
+  localStorage.setItem("adc-theme", isDark ? "dark" : "light");
+}
+
+const savedTheme = localStorage.getItem("adc-theme");
+
+updateTheme(savedTheme === "dark");
+
+themeToggle.addEventListener("click", () => {
+  updateTheme(!document.body.classList.contains("dark"));
+});
+
+/* ==========================================
+   4. MOBILE MENU
+========================================== */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
+
+/* ==========================================
+   5. TELEGRAM MESSAGE FORM
+========================================== */
+
+/*
+  IMPORTANT:
+  No Telegram username was supplied.
+
+  This uses Telegram's share URL, which opens
+  Telegram's sharing interface with a prefilled
+  message.
+
+  Once you have the clinic's public username,
+  replace the empty string below, for example:
+  const TELEGRAM_USERNAME = "AfricaDentalClinic";
+*/
+
+const TELEGRAM_USERNAME = "";
+
+document.getElementById("telegramForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !phone || !message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  const formattedMessage =
+`🦷 AFRICA DENTAL CLINIC - NEW MESSAGE
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+
+💬 Message:
+${message}
+
+Sent through the Africa Dental Clinic website.`;
+
+  let telegramURL;
+
+  if (TELEGRAM_USERNAME) {
+    telegramURL =
+      "https://t.me/" +
+      encodeURIComponent(TELEGRAM_USERNAME) +
+      "?text=" +
+      encodeURIComponent(formattedMessage);
+  } else {
+    telegramURL =
+      "https://t.me/share/url?url=" +
+      encodeURIComponent("https://t.me/") +
+      "&text=" +
+      encodeURIComponent(formattedMessage);
+  }
+
+  window.open(telegramURL, "_blank", "noopener,noreferrer");
+});
+
+/* ==========================================
+   6. SCROLL REVEAL ANIMATIONS
+========================================== */
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(element => {
+  revealObserver.observe(element);
+});
+
+/* ==========================================
+   7. CURRENT YEAR
+========================================== */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+</body>
+</html>
